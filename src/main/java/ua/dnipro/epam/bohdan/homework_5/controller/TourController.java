@@ -2,14 +2,12 @@ package ua.dnipro.epam.bohdan.homework_5.controller;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import ua.dnipro.epam.bohdan.homework_5.entity.Tour;
-import ua.dnipro.epam.bohdan.homework_5.repository.TourRepository;
+import ua.dnipro.epam.bohdan.homework_5.service.TourService;
 
 import java.util.Optional;
 
@@ -17,29 +15,30 @@ import java.util.Optional;
 @RequestMapping("tours")
 public class TourController {
 
-    @Autowired
-    private TourRepository tourRepository;
+    private static final String DESC = "desc";
 
-//    @GetMapping(value = "/all")
-//    public Iterable<Tour> getAllTour(){
-//        return tourRepository.findAll();
-//    }
+    private TourService tourService;
+
+    @Autowired
+    public TourController(TourService tourService) {
+        this.tourService = tourService;
+    }
 
     @GetMapping(value = "/all/{page}/{sort}")
     public Iterable<Tour> getAllTourSort(@PathVariable Integer page,
                                          @PathVariable String sort) {
-        return tourRepository.findAll(PageRequest.of(page - 1, 4, Sort.by(sort)));
+        return tourService.findAll(page, sort, "null");
     }
 
     @GetMapping(value = "/all/{page}/{sort}/desc")
     public Iterable<Tour> getAllTourSortDesc(@PathVariable Integer page,
                                              @PathVariable String sort) {
-        return tourRepository.findAll(PageRequest.of(page - 1, 4, Sort.by(sort).descending()));
+        return tourService.findAll(page, sort, DESC);
     }
 
     @GetMapping(value = "/{id}")
     public Optional<Tour> getAllById(@PathVariable Long id) {
-        return tourRepository.findById(id);
+        return tourService.findById(id);
     }
 
 }
