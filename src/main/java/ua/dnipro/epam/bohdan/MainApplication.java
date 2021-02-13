@@ -1,13 +1,13 @@
-package ua.dnipro.epam.bohdan.homework_5;
+package ua.dnipro.epam.bohdan;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Homework5Application {
+public class MainApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(Homework5Application.class, args);
+        SpringApplication.run(MainApplication.class, args);
     }
 
 }

@@ -1,4 +1,4 @@
-package ua.dnipro.epam.bohdan.homework_5.entity;
+package ua.dnipro.epam.bohdan.entity;
 
 
 import lombok.Getter;

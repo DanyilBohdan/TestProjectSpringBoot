@@ -1,4 +1,4 @@
-package ua.dnipro.epam.bohdan.homework_5.controller;
+package ua.dnipro.epam.bohdan.controller;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import ua.dnipro.epam.bohdan.homework_5.entity.Tour;
-import ua.dnipro.epam.bohdan.homework_5.service.TourService;
+import ua.dnipro.epam.bohdan.entity.Tour;
+import ua.dnipro.epam.bohdan.service.TourService;
 
 import java.util.Optional;
 
@@ -17,7 +17,7 @@ public class TourController {
 
     private static final String DESC = "desc";
 
-    private TourService tourService;
+    private final TourService tourService;
 
     @Autowired
     public TourController(TourService tourService) {

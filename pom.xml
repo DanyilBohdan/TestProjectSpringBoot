@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>ua.dnipro.epam.bohdan</groupId>
-    <artifactId>homework_5</artifactId>
+    <artifactId>TestProjectSpringBoot</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>homework_5</name>
+    <name>TestProjectSpringBoot</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>

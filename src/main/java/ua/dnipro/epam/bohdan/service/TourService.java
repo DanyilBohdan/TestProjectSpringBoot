@@ -1,6 +1,6 @@
-package ua.dnipro.epam.bohdan.homework_5.service;
+package ua.dnipro.epam.bohdan.service;
 
-import ua.dnipro.epam.bohdan.homework_5.entity.Tour;
+import ua.dnipro.epam.bohdan.entity.Tour;
 
 import java.util.Optional;
 

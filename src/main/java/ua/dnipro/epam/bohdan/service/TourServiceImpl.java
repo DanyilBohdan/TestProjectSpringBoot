@@ -1,11 +1,11 @@
-package ua.dnipro.epam.bohdan.homework_5.service;
+package ua.dnipro.epam.bohdan.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
-import ua.dnipro.epam.bohdan.homework_5.entity.Tour;
-import ua.dnipro.epam.bohdan.homework_5.repository.TourRepository;
+import ua.dnipro.epam.bohdan.entity.Tour;
+import ua.dnipro.epam.bohdan.repository.TourRepository;
 
 import java.util.Optional;
 
@@ -13,7 +13,7 @@ import java.util.Optional;
 public class TourServiceImpl implements TourService {
 
 
-    private TourRepository tourRepository;
+    private final TourRepository tourRepository;
 
     @Autowired
     public TourServiceImpl(TourRepository tourRepository) {

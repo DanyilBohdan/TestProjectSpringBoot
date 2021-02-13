@@ -1,4 +1,4 @@
-package ua.dnipro.epam.bohdan.homework_5;
+package ua.dnipro.epam.bohdan;
 
 import org.springframework.boot.actuate.health.Health;
 import org.springframework.boot.actuate.health.HealthIndicator;
